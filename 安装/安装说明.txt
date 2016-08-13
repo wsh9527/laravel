@@ -1,0 +1,17 @@
+laravel-master.zip 解压后
+cd到解压项目根
+命令行运行 composer update
+(前提是已经安装composer，未安装运行 composer install 注：安装前开启vpn)
+等待安装完成后 运行项目
+
+运行项目报错：
+Whoops, looks like something went wrong.
+1/1
+RuntimeException in compiled.php line 7737:
+
+解决：
+cd 到laravel根目录 然后运行 php artisan key:generate；
+前提是你项目根目录下有个.env文件，
+如果没有,敲命令 ”echo 内容 >.env“，生成一个.env 文件，
+然后把根路径下的.env.example的内容复制进去，
+再运行 php artisan key:generate。
